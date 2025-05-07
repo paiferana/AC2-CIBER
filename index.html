@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensagens Seguras</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@3.1.9-1/crypto-js.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Mensagens Seguras</h1>
+    <div class="messages-box">
+      <div id="messages"></div>
+    </div>
+    
+    <form id="message-form">
+      <input type="text" id="message" placeholder="Digite sua mensagem" required>
+      <button type="submit">Enviar</button>
+    </form>
+    
+    <input type="hidden" id="csrf-token" value="">
+  </div>
+  
+  <script src="app.js"></script>
+  <script src="csrf.js"></script>
+</body>
+</html>
