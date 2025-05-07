@@ -6,4 +6,16 @@ Criptografia assimétrica: Utiliza um par de chaves: uma chave pública, que pod
 
 Ambos os tipos de criptografia têm suas vantagens e desvantagens. A criptografia simétrica é mais adequada para cenários em que o volume de dados é grande e a chave já foi compartilhada de maneira segura, como no caso de backups de dados ou VPNs. Já a criptografia assimétrica é mais indicada para cenários em que a troca de chaves precisa ocorrer de forma segura sem que as partes se conheçam previamente, como em transações online ou na troca de informações sensíveis em sistemas de e-mail seguro. Em muitas aplicações modernas, como o protocolo SSL/TLS, ambas as criptografias são usadas em conjunto: a criptografia assimétrica para a troca inicial da chave e a criptografia simétrica para a transmissão eficiente dos dados após o estabelecimento da comunicação segura.
 
+A criptografia simétrica foi usada com AES para garantir que as mensagens sejam enviadas de forma segura.
 
+A chave secreta foi fixada para simplificação, mas em um caso real, a chave deve ser trocada de forma segura entre os usuários.
+
+Proteção CSRF:
+
+A proteção CSRF foi implementada gerando um token CSRF único para cada sessão. Esse token é enviado junto com o formulário e validado no lado do cliente.
+
+Testando a criptografia e CSRF:
+
+A criptografia é validada através da verificação de que a mensagem criptografada não pode ser lida sem a chave correta.
+
+A proteção CSRF é validada ao tentar manipular o token CSRF, o que resultaria em um erro de segurança.
